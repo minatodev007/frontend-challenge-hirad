@@ -1,0 +1,14 @@
+@import "./sizings";
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin global-container {
+  width: 100%;
+  max-width: $container;
+  padding: 0 1rem;
+  @include flex-center();
+}

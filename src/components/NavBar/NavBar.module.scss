@@ -1,0 +1,22 @@
+@import "styles/_mixins";
+
+.wrapper {
+  width: 100%;
+  @include flex-center();
+
+  .container {
+    @include global-container();
+    padding-top: 1rem;
+
+    .tabsContainer {
+      flex: 1;
+      @include flex-center();
+    }
+
+    .backButtonContainer {
+      margin-right: auto;
+      @include flex-center();
+    }
+  }
+
+}

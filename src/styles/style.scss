@@ -1,0 +1,20 @@
+@import "./normalize";
+@import "./colors";
+@import "./sizings";
+@import "./colors";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+body.light-mode {
+  background-color: white;
+}
+
+body.dark-mode {
+  background-color: $primary_black;
+}

@@ -1,0 +1,111 @@
+@import "styles/_mixins";
+@import "styles/_colors";
+
+.wrapper {
+  width: 100%;
+  padding-top: 2rem;
+  @include flex-center();
+
+  .container {
+    @include global-container();
+    @include flex-center();
+    flex-direction: column;
+
+    .metamaskLogo {
+      width: 15rem;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    .logotype {
+      transform: translateY(-1rem);
+      margin-bottom: 1rem;
+    }
+
+    &.connected {
+      width: 100%;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 1rem;
+      max-width: 50rem;
+    
+      header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.2rem;
+
+        .connectedText {
+          color: $secondary_green;
+          position: relative;
+
+          &::before {
+            content: '';
+            width: .5rem;
+            height: .5rem;
+            border-radius: 100%;
+            background-color: $secondary_green;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -.875rem;
+          }
+        }
+  
+        .network {
+          width: 100%;
+        }
+      }
+
+      .walletInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: .5rem 0;
+
+        .address {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .balanceContainer, .tokensList {
+          width: 100%;
+          flex-direction: column;
+        }
+
+        .balanceContainer {
+          @include flex-center();
+        }
+
+        .tokensList {
+          margin-top: 1rem;
+          .token {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+
+            .info {
+              @include flex-center();
+              img {
+                width: 2rem;
+                height: 2rem;
+                margin-right: .5rem;
+              }
+
+              .caption {
+                display: flex;
+                flex-direction: column;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
